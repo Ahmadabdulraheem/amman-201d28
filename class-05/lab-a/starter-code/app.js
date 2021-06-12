@@ -52,10 +52,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let total = a+b+c;
-  let product =a*b*c;
-  return [total, product, `${a} and ${b} and ${c} sum to ${total}.`,  `The product of ${a} and ${b} and ${c} is ${product}.`];
+function sumAndMultiply(a,b,c) { //eslint-disable-line
+  let total = sum(a,b)[0];
+  total= sum(total,c)[0];
+  let product = multiply(a,b)[0];
+  product = multiply(product,c)[0];
+  return [total,product,`${a} and ${b} and ${c} sum to ${total}.`, `The product of ${a} and ${b} and ${c} is ${product}.`]
   
 }
 
